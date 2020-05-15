@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>图片轮播</title>
+	<meta charset="utf-8">
+</head>
+<body>
+<div align="center">
+	<img id="pic" src="https://t8.baidu.com/it/u=2247852322,986532796&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1588837052&t=41e70968efb1d74cd73acbe00551f1b6.jpg"> 
+	<script type="text/javascript">
+		function step(){
+			var picture=document.getElementById("pic").getAttribute("src");
+		switch (picture) {
+			case 'https://t8.baidu.com/it/u=2247852322,986532796&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1588837052&t=41e70968efb1d74cd73acbe00551f1b6.jpg':document.getElementById("pic").setAttribute("src",'https://t9.baidu.com/it/u=2268908537,2815455140&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1588837052&t=f2b15bf0682f280421e13310e20d00ee.jpg');
+				// statements_1
+				break;
+			default:
+			document.getElementById("pic").setAttribute("src",'https://t8.baidu.com/it/u=2247852322,986532796&fm=79&app=86&size=h300&n=0&g=4n&f=jpeg?sec=1588837052&t=41e70968efb1d74cd73acbe00551f1b6.jpg')
+				// statements_def
+				break;
+		}
+	}
+	self.setInterval('step()',2000);
+    </script>
+</div>
+</body>
+</html>
