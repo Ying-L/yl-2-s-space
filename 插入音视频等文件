@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>homework2</title>
+	<meta charset="utf-8">
+	<meta name="description" content="LONGLONG's trainning">
+	<meta name="author" content="YINGLONGLONG">
+	<base href="../素材/" target="_blank">
+<style>
+	body{background-color:powderblue;}
+	a:link{
+		color:green;
+		text-decoration: underline;
+	}
+	a:hover{
+		color:purple;
+		text-decoration: underline;
+	}
+	a:active{
+		color:red;
+		text-decoration: underline;
+	}
+	a:visited{
+		color:blue;
+		text-decoration: none;
+	}
+</style>
+</head>
+<body>
+<div align="center">
+<a href="https://www.baidu.com/" target="iframe_a" style="display: block;text-align: center;border: 2px solid tomato;width: 2%;">百度</a>	
+<iframe src=" " width="1000" height="400" name="iframe_a"></iframe>
+<br><br>
+<img id="gif" src="小丸子动图.gif" alt="小丸子动图" >
+</div>
+<div style="background: grey;color:red;padding: 1px;text-align:center;">
+<p>
+这是一段中文
+</p>
+</div>
+<div align="center">
+<br>
+<br>
+<audio controls>
+  <source src="sugi.wa - je t'aime.mp3" type="audio/mpeg">
+</audio>
+<br>
+<video width="320" height="240" controls>
+  <source src="../素材/Into It Over It - The Shaking of Leaves in Vimeo Staff Picks on Vimeo.mp4" type="video/mp4"></video>
+</div>
+</body>
+</html>
