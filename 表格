@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>work2</title>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>
+				Google
+				<br>
+				<br>
+				<a href="https://www.baidu.com/" target="_blank">Baidu</a>
+			</td>
+			<td>
+				The Cell contains a table:&nbsp;&nbsp;
+				<table border="1">
+				<tr>
+					<td>A</td>
+					<td>B</td>
+				</tr>
+				<tr>
+					<td>C</td>
+					<td>D</td>
+				</tr>
+			    </table>
+			</td>
+		</tr>
+		<tr>
+		<td>The cell cotains a list:&nbsp;&nbsp;
+		<ul>
+			<li>apple</li>
+			<li>banana</li>
+			<li>pineapple</li>
+		</ul>
+	    </td>
+	    <td>
+	    	<img src="../素材/中国国旗.jpg" alt="flag" width="50">
+	    </td>
+		</tr>
+	</table>
+
+</body>
+</html>
