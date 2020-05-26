@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Calender</title>
+    <style>
+	div{
+		width: 24.6%;
+		height: 50px;
+		background-color:#4A2DB6;
+		margin:2px;
+		float: left;
+		color: white;
+		text-align:center;		
+	}
+</style>
+</head>
+<body>
+	月份：<select id="month">
+		<option value="">请选择</option>
+		<option value="January">January</option>
+		<option value="February">February</option>
+		<option value="March">March</option>
+		<option value="April">April</option>
+		<option value="May">May</option>
+		<option value="June">June</option>
+		<option value="July">July</option>
+		<option value="August">August</option>
+		<option value="September">September</option>
+		<option value="October">October</option>
+		<option value="November">November</option>
+		<option value="December">December</option>
+	</select>
+<br>
+	<p id="selected"></p>
+<div id="day" style="width: 100%;height: 100%;background-color: white;border:none;float: hidden;"></div>
+	<script>
+		document.getElementById("month").addEventListener("change",function(){document.getElementById('selected').innerHTML=this.value
+																			 })
+		var Month=document.getElementById("month");
+		Month.onchange=function()
+		{
+		for(var i=0;i<Month.options.length;i++)
+		{
+			if (Month.options[i].selected)
+			{
+				document.getElementById("day").innerHTML="";
+
+				if (Month.options[i].value=="") {
+					document.getElementById("day").innerHTML="";
+				}
+				//2月的28天
+				else if (Month.options[i].value=="February") 
+				{
+					for(var i=1;i<29;i++)
+					{
+						var DIV=document.createElement("div");
+						var DAY=document.getElementById("day");
+						DIV.innerHTML=i;
+						DAY.appendChild(DIV);
+					}
+				}
+				else if 
+					//30天的月份
+					(Month.options[i].value=="April"||Month.options[i].value=="June"||Month.options[i].value=="September"||Month.options[i].value=="November")
+				 {
+				 	for(var i=1;i<31;i++)
+				 	{
+				 		var DIV=document.createElement("div");
+						var DAY=document.getElementById("day");
+						DIV.innerHTML=i;
+						DAY.appendChild(DIV);
+				 	}
+				 }
+				 else
+					 //31天的月份
+				 {
+				 	for(var i=1;i<32;i++)
+				 	{
+				 		var DIV=document.createElement("div");
+						var DAY=document.getElementById("day");
+						DIV.innerHTML=i;
+						DAY.appendChild(DIV);
+				 	}
+				 }	
+			}
+		}			
+		}
+	</script>
+  </body>
+</html>
