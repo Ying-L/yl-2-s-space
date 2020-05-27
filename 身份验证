@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Identity Check</title>
+</head>
+<body>
+<form>
+<h1>Input your name, and check your indentity!</h1>
+Your name:<input type="text" id="name">
+<button onclick="judge()">OK</button>
+</form>
+
+<script>
+function judge(){
+	var yourName = document.getElementById('name').value
+	switch (yourName) {
+		case "Molly":
+		alert('student');
+			break;
+		case"John":
+		alert("student");
+		    break;
+		case"Brown":
+		alert("Lecturer");
+		    break;
+        case"Li Yang":
+        alert("assistant");
+            break;
+		default:
+			alert("Not belong to this course");
+	}
+}
+</script>
+</body>
+</html>

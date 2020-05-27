@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>table</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div table{border-collapse: collapse;height:80%;width: 80%;margin: auto}
+	</style>
+</head>
+<body>
+line:
+<input type="text" id="line">
+
+colume:
+<input type="text" id="colume">
+<br><br>
+<input type="button" value="create table" onclick="create();">
+<br>
+<br>
+<br>
+<div id="divv"></div><!--空的div-->
+</body>
+<script type="text/javascript">
+	function create(){
+		var line = document.getElementById("line").value;
+		var colume = document.getElementById("colume").value;
+
+		var tab = "<table border='1'>";
+		for(var i=1;i<=line;i++){
+			tab += "<tr>";
+			for(var j=1;j<=colume;j++){
+				k = (i-1)*colume+j /*为表格内容赋值*/ /*i=1,j=1/2/3/../column值，根据公式计算，得到相应表格框里的数字*/
+				tab += "<td style='text-align:center'>"+ k +"</td>"
+			}
+			tab += "</tr>";
+		}
+		tab += "</table>";
+
+		var divv = document.getElementById("divv");
+		divv.innerHTML = tab;
+	}
+</script>
+</html>

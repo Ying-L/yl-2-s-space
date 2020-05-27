@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BMI Caculate</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+		div{
+			border: 3px solid black;
+			text-align: center;
+			width:70%;
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+	<p style="text-align: center">
+		About Standered Weight(ST)
+		<br><br>
+		For man:<br>
+		ST=height-100.<br>
+		if(weight-ST)>3,overweight;<br>
+		if(weight-ST)<-3,underweight;<br>
+		otherwise,normal.<br><br>
+		For woman:<br>
+		ST=height-110.<br>
+		if (weight-ST)>3,overweight;<br>
+		if(weight-ST)<-3,underweight;<br>
+		otherwise,normal.
+
+	</p>
+<div>
+	<p>Gender(male/female):<input type="text" name="gender"></p>
+	<p>height(cm):<input type="text" name="height"></p>
+	<p>weight(kg):<input type="text" name="weight"></p>
+	<p><button onclick="apprise()" >apprise</button></p>
+	<p>Input "gender", "height" and "weight" in input box. Click "Apprise" button to check the result.</p>
+</div>
+
+<script>
+function apprise()
+{
+	var Input = document.getElementsByTagName("input");
+	var gender = Input[0].value;
+	var height = Input[1].value;
+	var weight = Input[2].value;
+	var ST_man = weight-(height-100);
+	var ST_woman = weight-(height-110);
+
+	if (gender == "male"){
+		if(ST_man>3){
+			alert("overweight!");
+		}else if (ST_man<-3){
+			alert("underweight!");
+		}else {
+			alert("normal!");
+        }
+		}else if(gender == "female"){
+		if(ST_woman>3){
+			alert("overweight!");
+		}else if(ST_woman<-3){
+			alert("underweight!");
+	    }else {
+		    alert("normal!");
+		}
+	    }else{
+    	    alert("wrong input of gender");
+    }
+}	
+</script>
+</body>
+</html>
